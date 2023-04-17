@@ -31,7 +31,6 @@ class App extends Component {
                         <ErrorBoundary>
                             <CharList onCharSelected={this.onCharSelected}/>
                         </ErrorBoundary>
-                        
                         <ErrorBoundary>
                             <CharInfo charId={this.state.selectedChar}/>
                         </ErrorBoundary>

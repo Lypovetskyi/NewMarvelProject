@@ -7,7 +7,6 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
 
 import './charInfo.scss';
-
 class CharInfo extends Component {
 
     state = {
@@ -28,8 +27,6 @@ class CharInfo extends Component {
         }
     }
 
-
-
     updateChar = () => {
         const {charId} = this.props;
         if (!charId) {
@@ -42,8 +39,6 @@ class CharInfo extends Component {
             .getCharacter(charId)
             .then(this.onCharLoaded)
             .catch(this.onError);
-
-        this.foo.bar = 0;
     }
 
     onCharLoaded = (char) => {
@@ -52,7 +47,7 @@ class CharInfo extends Component {
             loading: false
         })
     }
- 
+
     onCharLoading = () => {
         this.setState({
             loading: true
