@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -24,7 +23,7 @@ const CharInfo = (props) => {
         if (!charId) {
             return;
         }
-        
+
         clearError();
         getCharacter(charId)
             .then(onCharLoaded)
@@ -33,7 +32,6 @@ const CharInfo = (props) => {
     const onCharLoaded = (char) => {
         setChar(char);
     }
-
 
     const skeleton = char || loading || error ? null : <Skeleton/>;
     const errorMessage = error ? <ErrorMessage/> : null;
